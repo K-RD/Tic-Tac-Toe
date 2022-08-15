@@ -28,9 +28,9 @@ function valueDisplay(element){
 }
 function allElementArray(){
     const arr = new Array(9);
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 9; i++) {
         try {
-            arr[i] = document.getElementById('box'+i).innerText;
+            arr[i] = document.getElementById('box'+(i+1)).innerText;
         } catch (error) {
             arr[i] = 3;
         } 
