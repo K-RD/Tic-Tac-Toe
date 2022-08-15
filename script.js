@@ -14,16 +14,28 @@ function setValue(){
     console.log("choice is : "+window.choice);
     console.log("position is : "+window.boxPosition);
     console.log('-----------------');
-    let element = document.querySelector('[data-box'+window.boxPosition+']');
-    console.log('[data-box'+window.boxPosition+']');
+    // let element = document.querySelector('[data-box'+window.boxPosition+']');
+    let element = document.getElementById('box'+window.boxPosition);
+    console.log('box'+window.boxPosition);
     console.log(element);
     valueDisplay(element);
 
 }
 function valueDisplay(element){
-    element.style.setInnerText = window.choice;
+    element.innerText = window.choice;
     console.log('value displayed');
-    check();
+    allElementArray();
+}
+function allElementArray(){
+    const arr = new Array(9);
+    for (let i = 0; i < 10; i++) {
+        try {
+            array[i] = document.getElementById('box'+i).innerText;
+        } catch (error) {
+            array[i] = 3;
+        } 
+    }
+    check(arr);
 }
 function check(arr){
     if((arr[0]==arr[1] && arr[1]==arr[2] ) ||
